@@ -166,6 +166,7 @@ export function assetPlugin(config: ResolvedConfig): Plugin {
 
       id = id.replace(urlRE, '$1').replace(/[?&]$/, '')
       const url = await fileToUrl(id, config, this)
+      console.log(url)
       return `export default ${JSON.stringify(url)}`
     },
 
